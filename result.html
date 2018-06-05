@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}
+Find the Right Charity
+{% endblock %}
+
+{% block content %}
+    <section>
+        <h1>Here are your results:</h1>
+        {% for charity in cl %}
+            <ul>{{charity}}</ul>
+        {% endfor %}
+    </section>
+{% endblock %}
+
+{% block sidebar %}
+{% endblock %}
