@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}
+Find the Right Charity
+{% endblock %}
+
+{% block content %}
+    <section>
+        <h1>Here are some charities you can support:</h1>
+        {% for charity_name, link in charity_dict.items() %}
+                <ul><a href="{{'http://' + link}}">{{charity_name}}</a></ul>
+        {% endfor %}
+    </section>
+{% endblock %}
+
+{% block sidebar %}
+{% endblock %}
+

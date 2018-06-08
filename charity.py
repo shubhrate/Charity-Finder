@@ -1,3 +1,14 @@
+charities = []
+
+class Charity:
+    def myCharity(self, category, link):
+        charity = {"category": category, "link": link}
+        charities.
+
+
+
+
+
 charities = {'Animals':
                 ['American Humane Society',
                 'Jane Goodall Institute',

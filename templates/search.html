@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}
+Find the Right Charity
+{% endblock %}
+
+{% block content %}
+	<section>
+		<h1>Looking for a charity to support? What are you interested in?</h1>
+        <form action="" method="post">
+            <article>
+                <p>
+                    Please select an interest:
+                </p>
+            <select name=interest method="POST" action="">
+                {% for charity in charity_names %}
+                    <option value= "{{charity}}" selected>{{charity}}</option>"
+                {% endfor %}
+            </select>
+         <p>
+            <button type="submit">Search</button>
+        </p>
+            </article>
+        </form>
+	</section>
+{% endblock %}
+
+{% block sidebar %}
+{% endblock %}
