@@ -6,15 +6,13 @@ Look Through Charities
 
 {% block content %}
     <section>
-        <h1>Don't Know Where to Get Started? Here are charities to browse through:</h1>
-        <form action="" method="post">
-            <article>
-                
-                <p>
-                    <button type="submit">Search</button>
-                </p>
-            </article>
-        </form>
+        <h1>Don't Know Where to Get Started?</h1>
+        <h2>Here are charities to browse through:</h2>
+        {% for category, ch_list in charity_dict.items() %}
+            {% for charity_name, link in ch_list.items() %}
+                <ul><a href="{{'http://' + link}}">{{charity_name}}</a></ul>
+            {% endfor %}
+        {% endfor %}
     </section>
 {% endblock %}
 

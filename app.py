@@ -30,8 +30,9 @@ charities = {'Animals':
 def search_charity(interest):
     if interest in charities.keys():
         return charities[interest]
-    else:
-        return ["Sorry, we do not have data for " + interest]
+
+def browse_charity():
+    return charities
 
 @app.route('/')
 @app.route('/index')
@@ -46,6 +47,11 @@ def search():
         app.logger.debug('searched interest: ' + interest)
         return render_template('result.html', charity_dict=charity_dict)
     return render_template('search.html', charity_names=list(charities.keys()))
+
+@app.route('/browse')
+def browse():
+    charity_dict = browse_charity()
+    return render_template('browse.html', charity_dict=charity_dict)
 
 @app.errorhandler(404)
 def page_not_found(e):
