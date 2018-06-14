@@ -22,7 +22,7 @@
                     <ul>
                         <li><a href="{{ url_for('browse') }}">Browse Charities</a></li>
                         <li><a href="{{ url_for('search') }}">Search by Interest</a></li>
-                        <li><a href="#">More Information</a></li>
+                        <li><a href="{{ url_for('moreinfo') }}">More Information</a></li>
                     </ul>
                 </nav>
             </header>
@@ -36,8 +36,8 @@
 
                 {% block sidebar %}
                     <aside>
-                        <h3>aside</h3>
-                        <p>Random stuff</p>
+                        <h3>Want to help but don't know how?</h3>
+                        <p>No problem! We're here to help you take what you are passionate about and turn it into an opportunity to support and important cause. Just tell us what you like and we'll handle the rest!</p>
                     </aside>
                 {% endblock %}
             </div> <!-- #main -->
@@ -45,7 +45,7 @@
 
         <div class="footer-container">
             <footer class="wrapper">
-                <h3>footer</h3>
+                <h3>Created by Shubhra Tewari, 2018.</h3>
             </footer>
         </div>
 
