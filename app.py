@@ -53,6 +53,10 @@ def browse():
     charity_dict = browse_charity()
     return render_template('browse.html', charity_dict=charity_dict)
 
+@app.route('/moreinfo')
+def moreinfo():
+    return render_template('moreinfo.html')
+
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
